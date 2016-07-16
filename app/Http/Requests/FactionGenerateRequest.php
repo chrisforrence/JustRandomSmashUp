@@ -25,10 +25,10 @@ class FactionGenerateRequest extends Request
      */
     public function rules()
     {
-        
+        $sets = $this->get('sets', []);
         return [
             'sets' => 'required|array',
-            'players' => 'required|numeric|min:2|max:' . Cache::get('players.max', function() { return floor(Faction::count('id') / 2); })
+            'players' => 'required|numeric|min:2|max:' . floor(Faction::whereIn('set_id', $sets)->count('id') / 2),
         ];
     }
 }

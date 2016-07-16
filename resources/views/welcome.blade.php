@@ -1,20 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row">
-    <div class="col-xs-12">
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                @foreach ($errors->all() as $error)
-                    <div>{{ $error }}</div>
-                @endforeach
-            </div>
-        @endif
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        @include('forms.generate')
-    </div>
-</div>
+    <p>Randomly generate a Smash Up! </p>
+    <p>Some features:</p>
+    <ul>
+        <li>Don't have every expansion ever? That's fine, just unselect the ones you don't have</li>
+        <li>We'll let you know if you'll need the Madness, Treasure or Monsters decks</li>
+    </ul>
 @endsection

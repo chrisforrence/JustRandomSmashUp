@@ -14,7 +14,8 @@
 use Illuminate\Http\Request;
 
 Route::get('/', 'FactionGeneratorController@index');
-Route::get('/generate', 'FactionGeneratorController@show');
+Route::post('/generate', 'FactionGeneratorController@show');
+Route::resource('sets', 'SetController', ['only' => 'index']);
 
 /*function (Request $request) {
     $factions = App\Faction::all()->shuffle();

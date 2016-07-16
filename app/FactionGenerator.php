@@ -3,19 +3,20 @@ namespace App;
 
 class FactionGenerator
 {
-    protected $results = [
-        'decks'
-    ];
-    protected $players = 2;
+    protected $results = ['decks'];
+    protected $num_players = 2;
     protected $sets = [];
+    protected $decks = [];
+    protected $players = [];
+    
     public function __construct()
     {
 
     }
 
-    public function withPlayers($players)
+    public function withPlayers($num_players)
     {
-        $this->players = $players;
+        $this->num_players = $num_players;
 
         return $this;
     }
@@ -29,12 +30,12 @@ class FactionGenerator
 
     public function generate()
     {
-        $result = ['additional_decks' => [], 'players' => []];
+        $game = new Game();
         
         // We'll do a snake draft
         $factions = Faction::whereIn('set_id', $this->sets)->get()->shuffle();
         for($i = 0; $i < $this->players; $i++) {
-            $result['players'][] = ['factions' => []];
+            $player['players'][] = ['factions' => []];
         }
         for($i = 0; $i < $this->players; $i++) {
             $faction = $factions->pop();

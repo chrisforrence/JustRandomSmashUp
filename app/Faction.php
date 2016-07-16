@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Eloquent;
 
-class Faction extends Model
+class Faction extends Eloquent
 {
     public $fillable = ['label', 'icon', 'requires_madness', 'requires_monsters', 'requires_treasure'];
     public $timestamps = false;

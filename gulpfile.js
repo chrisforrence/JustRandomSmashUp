@@ -1,5 +1,6 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-vueify');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,10 +12,9 @@ var elixir = require('laravel-elixir');
  |
  */
 
+
 elixir(function(mix) {
-    mix.sass('app.scss');
-    mix.scripts([
-        '../../../node_modules/jquery/dist/jquery.min.js',
-        '../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'
-    ], 'public/js/app.js');
+    mix.sass(['pure.scss', 'grids.responsive.scss', 'app.scss'], 'public/css/app.css');
+    mix.browserify(['main.js'], 'public/js/app.js');
+    mix.copy('node_modules/smooth-scroll/dist/js/smooth-scroll.js', 'public/js/smooth-scroll.js');
 });

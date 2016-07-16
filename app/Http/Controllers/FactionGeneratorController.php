@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\FactionGenerator;
+use App\Game;
 use App\Http\Requests\FactionGenerateRequest;
 use App\Set;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -18,12 +20,13 @@ class FactionGeneratorController extends Controller
 
     public function show(FactionGenerateRequest $request)
     {
-        $results = (new FactionGenerator)
-            ->withPlayers($request->get('players'))
-            ->withSets($request->get('sets'))
-            ->generate();
-        return view('results')
-            ->with('results', $results)
-            ->with('sets', Set::all());
+        $game = Game::create(['created_at' => Carbon::now()])->generate(
+            $request->get('players'),
+            $request->get('sets')
+        );
+        $game = Game::with('players', 'players.factions')->find($game->id);
+
+        return response()->json($game);
+
     }
 }
