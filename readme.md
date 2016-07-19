@@ -1,27 +1,26 @@
-# Laravel PHP Framework
+# [\#JustRandomSmashUp](http://www.justrandomsmashup.win)
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+\#JustRandomSmashUp is a project that I put together to randomly assign Smash Up factions to a number of players. While 2-4 is recommended, you _could_, with all of the available expansions, make a 21-person game. If that's how you want to roll, go for it.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## What did you use to put it together?
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+I used these languages, technologies and frameworks:
 
-## Official Documentation
+* PHP
+* Laravel 5.2
+* Vue.js
+* PureCSS
+* Smooth Scrolling
+* SQLite
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## ...why?
 
-## Contributing
+My wife and I enjoy playing Smash Up, and to make things a bit more interesting, we wanted to have our factions randomly assigned to us. However, not many of the faction random generators out there have all of the expansions. Since I have everything within a database, it's pretty darn simple to update this whenever a new expansion comes out.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Who uses it?
 
-## Security Vulnerabilities
+My wife and I do! Our game group uses it as well. You can use it too!
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+## Well, where can I check it out?
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+It's live at http://www.justrandomsmashup.win
