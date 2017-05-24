@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MunchkinExpansion::class);
         $this->call(ItsYourFaultExpansion::class);
         $this->call(CeaseAndDesistExpansion::class);
+        $this->call(WhatWereWeThinkingExpansion::class);
     }
 }
