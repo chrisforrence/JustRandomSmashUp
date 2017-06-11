@@ -14,6 +14,10 @@ class SetController extends Controller
 {
     public function index(Request $request)
     {
-        return response()->json(Cache::remember('sets', 120, function() { return Set::all(); }));
+        return response()->json(
+        	Cache::remember('sets', 120, function() { 
+        		return Set::where('released_on', '<=', Carbon\Carbon::today())->get();
+        	});
+        );
     }
 }

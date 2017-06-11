@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ItsYourFaultExpansion::class);
         $this->call(CeaseAndDesistExpansion::class);
         $this->call(WhatWereWeThinkingExpansion::class);
+        $this->call(SheepExpansion::class);
     }
 }

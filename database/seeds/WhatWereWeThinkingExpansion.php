@@ -11,7 +11,10 @@ class WhatWereWeThinkingExpansion extends Seeder
      */
     public function run()
     {
-        $set = Set::create(['name' => 'What Were We Thinking', 'released_on' => \Carbon\Carbon::createFromDate(2017, 3, 29)]);
+        $set = Set::create([
+            'name' => 'What Were We Thinking',
+            'released_on' => \Carbon\Carbon::createFromDate(2017, 3, 29)
+        ]);
         
         $set->factions()->create(['label' => 'Teddybears', 'icon' => '']);
         $set->factions()->create(['label' => 'Grandmas', 'icon' => '']);
