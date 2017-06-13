@@ -14,7 +14,7 @@ class CreatePlayersFactionsTable extends Migration
     {
         Schema::create('players_factions', function (Blueprint $table) {
 
-            $table->unsignedInteger('player_id');
+            $table->bigInteger('player_id')->unsigned();
             $table->unsignedInteger('faction_id');
             $table->foreign('player_id')->references('id')->on('players')->onDelete('cascade');
             $table->foreign('faction_id')->references('id')->on('factions')->onDelete('cascade');
