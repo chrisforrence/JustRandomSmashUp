@@ -16,7 +16,7 @@ class FactionGeneratorController extends Controller
     public function index(Request $request)
     {
         return view('welcome')->with('sets', Cache::remember('sets', 120, function() { 
-            return Set::where('released_on', '<=', Carbon\Carbon::today())->get();
+            return Set::where('released_on', '<=', Carbon::today())->get();
         }));
     }
 
