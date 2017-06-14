@@ -25,7 +25,7 @@
 </script>
 
 <template>
-    <div class="Player pure-u-1 pure-u-md-1-2 pure-u-xl-1-4">
+    <div class="Player pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
         <div class="Player__header">Player {{index}}</div>
         <ul>
             <li v-for="faction in player.factions">{{ faction.label }}</li>

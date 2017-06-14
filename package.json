@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "jquery": "^2.1.0",
-    "semantic-ui-css": "^2.2.1",
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "vue": "^1.0.26",
     "vue-resource": "^0.9.3"
