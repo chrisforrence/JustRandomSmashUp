@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use Cache;
 use App\FactionGenerator;
 use App\Game;
-use App\Http\Requests\FactionGenerateRequest;
 use App\Set;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Http\Requests\FactionGenerateRequest;
+use Illuminate\Http\Request;
 
 class FactionGeneratorController extends Controller
 {
