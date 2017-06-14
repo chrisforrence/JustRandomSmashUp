@@ -14,7 +14,7 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('game_id');
+            $table->bigInteger('game_id')->unsigned();
             $table->foreign('game_id')->references('id')->on('games')->onDelete('cascade');
         });
     }
