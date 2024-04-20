@@ -14,7 +14,10 @@ class Faction extends Model
         'requires_madness' => 'boolean',
         'requires_monsters' => 'boolean',
         'requires_treasure' => 'boolean',
+        'requires_stasis' => 'boolean',
     ];
+
+    public $timestamps = false;
 
     public function set()
     {

@@ -19,10 +19,10 @@ class TheObligatoryCthulhuExpansion extends Seeder
         ]);
 
         $set->factions()->createMany([
-            ['label' => 'Elder Things'],
-            ['label' => 'Innsmouth'],
-            ['label' => 'Cthulhu Cultists'],
-            ['label' => 'Miskatonic University'],
+            ['label' => 'Elder Things', 'requires_madness' => true],
+            ['label' => 'Innsmouth', 'requires_madness' => true],
+            ['label' => 'Cthulhu Cultists', 'requires_madness' => true],
+            ['label' => 'Miskatonic University', 'requires_madness' => true],
         ]);
     }
 }
